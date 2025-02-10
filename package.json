@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:css": "npx tailwindcss -i ./src/app/[lng]/sass/globals.scss -o ./public/output.css",
     "start": "next start",
     "lint": "tsc --noEmit && eslint . --max-warnings=0",
     "tsc": "tsc --noEmit",
