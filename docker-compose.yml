@@ -12,4 +12,5 @@ services:
     environment:
       - NODE_ENV=production
       - PORT=3000
-    command: "npm start"
+    command: >
+      sh -c "npm run build && npm start"
