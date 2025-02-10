@@ -2,6 +2,7 @@ import { dir } from 'i18next';
 import { Inter } from 'next/font/google';
 
 import { languages } from '../../i18n/settings';
+import Header from './components/Header';
 
 import type { Metadata } from 'next';
 import type { ILayout } from './interfaces/IPage';
@@ -27,7 +28,10 @@ export default function RootLayout({
 }: ILayout) {
   return (
     <html lang={lng} dir={dir(lng)}>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Header lng={lng} />
+        {children}
+      </body>
     </html>
   );
 }
